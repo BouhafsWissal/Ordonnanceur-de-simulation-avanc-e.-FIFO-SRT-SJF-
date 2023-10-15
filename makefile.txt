@@ -1,0 +1,13 @@
+HEADERS = main.h FIFO.h sjf.h rr.h 
+
+default: main
+
+program.o: program.c $(HEADERS)
+	gcc -c main.c -o main.o
+
+program: Main.o
+	gcc main -o main
+
+clean:
+	-rm -f main.o
+	-rm -f main
